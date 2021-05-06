@@ -1,0 +1,185 @@
+@media(max-width:768px) {
+
+    /*------------------------------all_common_css ------------------------------*/
+    html {
+        /* font-size: 6px; */
+    }
+
+    div,
+    p,
+    section,
+    a,
+    label {
+        /* font-size: 6px; */
+    }
+    h1,h2,h3,h4,h5,h6,p{
+        font-size: 80%;
+    }
+    h6{
+        margin-bottom: 0;
+    }
+
+    /*--------------------------template custom css------------------------------*/
+    .main-sidebar,
+    .main-sidebar::before {
+        width: 190px !important;
+    }
+
+    .aside_pushmenu_bar {
+        display: block;
+    }
+
+    /* template custom css end  */
+    /*------------------common page works ------------------------------*/
+    .top_nav_img {
+        height: 1rem;
+        width : 1rem;
+    }
+    .profile_dropdownMenu{
+        min-width: 8rem;
+    }
+    .nav_sign {
+        font-size: .5rem;
+    }
+
+    /* common page end  */
+
+
+    aside {
+        width: 168px !important;
+    }
+
+    /* all_common_css end  */
+    /*------------------------------ app page  ------------------------------*/
+
+    /* app page end  */
+    /*------------------------------ dashboard ------------------------------*/
+    /* pagination work  */
+    .my_card {
+        padding: 0px 0px;
+    }
+    .pagination {
+        padding-right: 6px;
+    }
+
+    .card_tools * {
+        margin-right: 9px !important;
+    }
+    .msg_sender {
+        font-size: .8rem;
+    }
+    .msg_subjct {
+        font-size: .6rem;
+    }
+    .my_msg_table .my_msg_table_img {
+        margin-right: 16px;
+    }
+    .dashboard_msg_list_body{
+        width: 70%;
+    }
+    .inbox_right_col{
+        width: 10%;
+    font-size: .6rem;
+    }
+
+    /* dashboard page end  */
+    /*---------------------------------msg_box ------------------------------*/
+    .s_r_both_pic {
+        width : 20px;
+        height: 20px;
+    }
+
+    .msg_box_subject {
+        padding: 2px;
+    }
+
+    .msg_box_subject h4 {
+        font-size: 1rem;
+    }
+    .msg_time {
+        font-size: 7px;
+        padding: 0;
+    }
+    .quick_reply_lines_parent {
+        padding: 0;
+    }
+    .quick_reply_lines span {
+        background-color: #d7e9f5;
+        padding: 3px 11px;
+        margin-left: 3px !important;
+        text-align: center;
+        border-radius: 16px;
+        color: #001f3f;
+        font-size: 9px;
+        box-shadow: 0rem 0.5rem 1rem rgba(0, 0, 0, .15);
+        font-weight: bold;
+    }
+    .msg_content {
+        padding: 0;
+    }
+    .msg_box_popup_parent {
+        padding: 0;
+    }
+    .msg_box_popup_parent.card-body{
+        padding: .8rem;
+    }
+    
+    .popup_reply_box_to{
+        font-size: 10px;
+        padding-top: 7px;
+    }
+.reply_box_to{
+    font-size: 10px;
+}
+.label_class {
+    right: -38px;
+    bottom: -73px;
+    top: unset;
+}
+#msg_box_popup .popup_bottom {
+    width: 85%;
+}
+
+.popup_submit {
+    width: 53%;
+}
+    /* msg_box page end  */
+
+    /*------------------------------ profile----------------------------------*/
+    .verified_text {
+        font-size: 5px;
+        padding: 3px;
+        margin: 0;
+        font-weight: 600;
+    }
+    .msg_body{
+        font-size: 8px;
+    }
+     
+    .alert {
+        padding: 3px;
+    margin: 0;
+    }
+    .profile_content_form{
+        padding: 0;
+    }
+    .progress_bar_file.upload-label {
+        height: 38px;
+    }
+    .progress_bar_file span {
+        padding: unset;
+        height: 100%;
+        width: 40%;
+    }
+    .progress_bar_file h5 {
+        width: 60%;
+        padding: 3px;
+        height: 100%;
+    }
+    
+    /* profile page end  */
+
+
+
+
+}

@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#parent_div {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: relative;
+
+}
+
+.clo_1 {
+    height: 100vh;
+    color: white;
+    position: absolute;
+    left: 0;
+    background-repeat: no-repeat, repeat;
+    background-image:  url("../img/Path 424.svg");
+    background-size: cover;
+}
+.img_div img{
+    width:70%;
+}
+
+.clo_1_sub {
+    width: 45%;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    margin-top: 70px;
+}
+
+.clo_2 {
+    height: 100vh;
+    color: black;
+    position: absolute;
+    right: 0;
+}
+
+.clo_2_sub {
+    width: 87%;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 2px 15px;
+    background: white;
+    z-index: 2;
+}
+.dot_img{
+    position: absolute;
+    right: 2px;
+    z-index: 1;
+    bottom: 35%;
+    overflow: hidden;
+}
+.dot_img img{
+    height: 25vh;
+    overflow: hidden;
+}
+
+.clo_2_sub .btn-block {
+    background-color: #213F7E;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.clo_2_sub .btn-block:hover {
+    background-color: #213F7E;
+}
+
+.clo_2_sub label {
+    font-weight: 1;
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+.click_shake:active {
+    transform: translateY(1px);
+   
+}
+.hover_shake:hover {
+    transform: translateY(2px);
+   
+}
+
+@media(max-width:768px) {
+    html {
+        font-size: 6px;
+    }
+
+    div,
+    p,
+    section,a,label {
+        font-size: 6px;
+    }
+    .clo_1 {
+        height: 40rem;
+        background-size: unset;
+        position: relative;
+
+        /* height: 100vh;
+        color: white;
+        position: absolute;
+        left: 0;
+        background-repeat: no-repeat, repeat;
+        background-image:  url("../img/Path 424.svg");
+        background-size: cover; */
+    }
+    .img_div img{
+        width: 33%;
+        float: right;
+    }
+    .clo_1_sub {
+        padding: 0px;
+    }
+    .clo_2 {
+        height: 50rem;
+        position: relative;
+    }
+    .clo_2_sub form{
+        padding: 32px;
+    }
+    .clo_2_sub {
+        padding: 32px;
+        padding-top: 0px;
+    }
+
+}
