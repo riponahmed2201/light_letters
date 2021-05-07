@@ -68,11 +68,19 @@ class CustomerController extends Controller
                 $proPic->move(public_path($proPicPath), $proPicName);
             }
             else{
-                unlink(public_path('/uploads/customer_pro_pic/'.$data->profile_picture));
-                $proPic = $request->file('profile_picture');
-                $proPicName = session('customer_id').'.'.$request->profile_picture->getClientOriginalExtension();
-                $proPicPath = '/uploads/customer_pro_pic/';
-                $proPic->move(public_path($proPicPath), $proPicName);
+                if(file_exists('/uploads/customer_pro_pic/'.$data->profile_picture) AND !empty($data->profile_picture)){
+                    // unlink('uploads/category/'.$categories->photo);
+                    unlink(public_path('/uploads/customer_pro_pic/'.$data->profile_picture));
+                    $proPic = $request->file('profile_picture');
+                    $proPicName = session('customer_id').'.'.$request->profile_picture->getClientOriginalExtension();
+                    $proPicPath = '/uploads/customer_pro_pic/';
+                    $proPic->move(public_path($proPicPath), $proPicName);
+                }else{
+                    $proPic = $request->file('profile_picture');
+                    $proPicName = session('customer_id').'.'.$request->profile_picture->getClientOriginalExtension();
+                    $proPicPath = '/uploads/customer_pro_pic/';
+                    $proPic->move(public_path($proPicPath), $proPicName);
+                }
             }
 //            $data->profile_picture= $proPicName;
 //            $data->save();
