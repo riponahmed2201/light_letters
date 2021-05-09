@@ -118,6 +118,7 @@ class PaymentController extends Controller
         $package->long_description = $request->long_description;
         $package->features = $request->features;
         $package->price = $request->price;
+        $package->duration = $request->duration;
         $package->save();
         return response()->json($package,201);
     }
@@ -129,6 +130,7 @@ class PaymentController extends Controller
         $package->long_description = $request->long_description;
         $package->features = $request->features;
         $package->price = $request->price;
+        $package->duration = $request->duration;
         $package->save();
         return response()->json($package);
     }

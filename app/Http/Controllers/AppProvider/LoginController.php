@@ -118,7 +118,8 @@ class LoginController extends Controller
 //                    'pass_confirm'=>$confirm,
                     'email'=> $email,
                 ]);
-                return view('home.dashboard');
+                // return view('home.dashboard');
+                return redirect('/home');
             }
             else {
                 return back()->with('message_pass','Wrong Password');
