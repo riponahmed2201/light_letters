@@ -44,8 +44,6 @@ Route::middleware('customerAuth')->group(function () {
     Route::get('/get-specific-client-mail/{id}',[MailController::class,'getSpecificClientMail']);
 
     Route::post('/reply-mail-client',[\App\Http\Controllers\ReplyMailController::class,'replyMailToClient']);
-    Route::post('/customer-login',[\App\Http\Controllers\AppProvider\LoginController::class, 'customerLogin']);
-    Route::post('/create-customer', [\App\Http\Controllers\CustomerApp\CustomerController::class, 'createCustomer']);
     Route::post('/reset-password', [\App\Http\Controllers\AppProvider\LoginController::class,'resetPassword']);
     Route::post('/token-check',[\App\Http\Controllers\AppProvider\LoginController::class,'tokenCheck']);
     Route::get('/remove-customer-reply/{reply_mail_id}',[\App\Http\Controllers\MailDeletionController::class,'removeReplyAsCustomer']);
@@ -53,6 +51,8 @@ Route::middleware('customerAuth')->group(function () {
     Route::get('/remove-all-mail/{customer_id}',[\App\Http\Controllers\MailDeletionController::class,'removeAllMail']);
 });
 
+Route::post('/create-customer', [\App\Http\Controllers\CustomerApp\CustomerController::class, 'createCustomer']);
+Route::post('/customer-login',[\App\Http\Controllers\AppProvider\LoginController::class, 'customerLogin']);
 Route::post('/customer-logout',[\App\Http\Controllers\AppProvider\LoginController::class, 'customerLogout']);
 
 Route::get('/home/policy', [HomeController::class, 'policy']);

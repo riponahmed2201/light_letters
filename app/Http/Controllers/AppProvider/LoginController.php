@@ -107,6 +107,7 @@ class LoginController extends Controller
     }
     //CustomerAuth Login Activity..................................................................
     public function customerLogin(Request $request){
+
         $email = strtolower($request->email);
         if ($customer = Customer::where('email',$email)->first()) {
 //            $passInfo = PasswordChange::where('customer_id',$customer->id)->first();
