@@ -28,19 +28,23 @@ class CustomerAuth
 //            return redirect('/home');
 //        }
 
-        if (session()->get('customer_id')) {
-            $customer = Customer::where('id',session()->get('customer_id'))->first()->email;
-            // dd($customer);
-             if ($customer != null) {
-                 return $next($request);
-             }else{
-                 return redirect('/');
-             }
-        }else{
-            return redirect('/');
-        }
+        // $customer_id = session()->get('customer_id');
+
+        // if ($customer_id) {
+        //     $customer = Customer::where('id',session()->get('customer_id'))->first()->email;
+        //     // dd($customer);
+        //      if ($customer != null) {
+        //          return $next($request);
+        //      }
+        //     //  else{
+        //     //      return redirect('/');
+        //     //  }
+        // }
+        // // else{
+        // //     return redirect('/');
+        // // }
 
 
-        //return $next($request);
+        return $next($request);
     }
 }
