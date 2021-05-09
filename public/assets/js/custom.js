@@ -3,7 +3,7 @@ jQuery(function ($) {
 
     //  ----------project common works > bootstrap tooltip(hover text)
     $('[data-toggle="tooltip"]').tooltip();
-    // top navbar checkbox work  
+    // top navbar checkbox work
     $('.particular_msglist_check').click(function () {
         $('.particular_msglist_check').not(this).prop('checked', false);
     });
@@ -259,7 +259,7 @@ jQuery(function ($) {
     //   -----------(old works)app.blade> popup modal work--------------
     jQuery('body').on('click', '#mypopupBtn', function (event) {
         $("#modal_position_middle").addClass('modal_position');
-        $('#modal_position_middle').removeClass('modal_position_reply').removeClass('modal_position_middle');;
+        $('#modal_position_middle').removeClass('modal_position_reply').removeClass('modal_position_middle');
         $('.modal-dialog').find(".modal-body").removeClass('reply_modal_body');
         $(".modal-dialog").find("#from").show();
         $(".modal-dialog").find("#text_cc").show();

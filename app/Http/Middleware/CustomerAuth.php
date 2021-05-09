@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Customer;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -27,7 +28,19 @@ class CustomerAuth
 //            return redirect('/home');
 //        }
 
+        if (session()->get('customer_id')) {
+            $customer = Customer::where('id',session()->get('customer_id'))->first()->email;
+            // dd($customer);
+             if ($customer != null) {
+                 return $next($request);
+             }else{
+                 return redirect('/');
+             }
+        }else{
+            return redirect('/');
+        }
 
-        return $next($request);
+
+        //return $next($request);
     }
 }

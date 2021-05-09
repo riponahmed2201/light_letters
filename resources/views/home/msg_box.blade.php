@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 @section('content')
     <div class="content-wrapper my_content_wrapper" id="content">
@@ -130,7 +131,7 @@
                                                                 <button class="btn btn-sm text-white font-weight-bold" style="background-color:#213f7e; border-radius: 25px">  {{ $tag }}</button>
                                                             @endforeach
                                                         @endif
-                                                    </span> 
+                                                    </span>
                                                     @endif
                                                 </div>
                                             </div>
@@ -209,7 +210,7 @@
                                 <div class="col-sm-12">
 
                                     @if ($replyMail->count() <= 2) @foreach($replyMail as $reply) <div class="row chatting_lines">
-                                    
+
                                         <hr class="hr2">
                                         {{--- --------  msg_reply 1st row  -- -------- --------}}
                                         @if($reply->sender == $clientInfo->email)

@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 @section('content')
 <!-- Content Wrapper. Contains page content -->
@@ -62,7 +63,7 @@
             </li>
 
             @if (isset($customerInfo))
-        
+
                 <li class="nav-item dropdown">
                     <img src="{{asset('/uploads/customer_pro_pic/'.$customerInfo->profile_picture)}}" alt="Profile_pic" class="top_nav_img dropdown-toggle" id="profile_dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                     <div class="dropdown-menu profile_dropdownMenu" aria-labelledby="profile_dropdownMenu">
@@ -178,7 +179,7 @@
                                                                 <span class="hidden_msg_reply_status">{{$mail->reply_status}}</span>
                                                             </p>
                                                             <p class="msg_sender">{{$mail->name}}
-                                                             
+
                                                                 @if($mail->tag)
                                                                     @php
                                                                     $tagData = json_decode($mail->tag);
